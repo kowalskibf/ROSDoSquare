@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+	<include file="$(find stero_mobile_init)/launch/tiago_simple.launch">
+		<arg name="world" value="empty" />
+	</include>
+	
+	<rosparam command="load" file="src/stero-po-lab-1/parameters.yaml" />
+	<node pkg="polab1" type="polab1_node" name="polab1_node" output="screen" />
+	<node pkg="polab1" type="polab1_node2" name="polab1_node2" output="screen" />
+</launch>
